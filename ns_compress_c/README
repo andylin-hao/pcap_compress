@@ -1,0 +1,135 @@
+Install these packages on Ubuntu:
+
+libpthread-stubs0-dev  zlib1g-dev
+
+To compile, just type make.
+
+*****************************************************************
+Packet compressor and decompressor.  Based on Van Jacobsen's (VJ)
+compression algorithm RFC1144.
+*****************************************************************
+
+Example runs:
+
+Simple run: Just run an in-memory encoding of the pcap file and output
+statistics.  The pcap file must be readable by libpcap.
+
+       ./fast $pcap
+
+If your pcap file does not have Ethernet headers (e.g. Caida traces),
+run:
+
+   	./fast $pcap -s
+
+(Newer versions don't need this.  This flag will be automatically set
+after reading the pcap file.)
+
+The pcap filename MUST be the first argument.  After that, the
+arguments can be in any order.
+
+To dump the records, compressed, to disk:
+
+   	 ./fast $pcap -s -d
+
+This will be slower.  Depending on the number of flows/packet seen in
+this trace, it can be 2x to 5x slower.
+
+The compressor will create the following files in the same directory
+as the pcap file.  All these files will be compressed using gzip.
+Running "file" on any of these files should confirm this.
+
+       $pcap.ts.delta
+       $pcap.diffs
+       $pcap.firstpackets
+       $pcap---stats.json
+
+- pcap.ts.delta contains the timestamps of all packets, encoded
+  as a full timeval, followed by u32-size microsecond diffs.
+
+- pcap.diffs contains the diffs computed for all packets in the
+  original pcap file.
+
+- pcap.firstpackets contains the list of first packets seen in a flow
+  (5 tuple).  The diff file only contains differences between previous
+  packet of the same flow (except for the first packet, which is
+  written to a separate file).
+
+- pcap---stats.json is the JSON file containing all stats printed on
+  the screen when ./fast runs.
+
+To change the output json stats file:
+
+   	  ./fast $pcap -d -j /path/to/json.json
+
+Tips
+====
+
+If you are parsing a LARGE pcap trace (100s of GB), it is useful to
+stop after you've parsed some number of bytes.  To do that, run:
+
+     	   ./fast $pcap -p percent
+	   ./fast $pcap -P max_packets
+
+Every 5 seconds, the compressor will check if it has processed
+$percent% of the toatl number of bytes.  If so, it will stop and
+output the stats.
+
+$max_packets is usually more accurate.  This condition is checked
+every packet.
+
+If you want to dump the pcap file up to the point that has been
+processed, run:
+
+	   ./fast $pcap -P 10000 -D
+
+This will run the compressor on the pcap file, process 10000 packets
+and dump the first 10000 packets to $pcap.read.pcap (in $pcap's
+directory).
+
+Clearing the flowtable
+======================
+
+Some traces have a high flow rate.  This will cause the flow hash
+table to grow which affects performance.  If you want to clear the
+flow hash table after every 10000 packets, run:
+
+     	  ./fast $pcap -i 10000
+
+This will affect the speed and compressibility.  We recommend setting
+it to a few million packets.
+
+Two situations can happen:
+
+     If the rate at which new flows are added per second is low, then
+     it's OK to ignore -i.  Nevertheless, the overhead of the first
+     packet of a flow is amortised over a large number of packets in
+     the flow; so, you may want to clear the flow hash table sooner
+     than later.
+
+     If flow rate is high, then your compressibility is going to be
+     small anyway (most compression benefits come from storing diffs
+     instead of the entire packet).  So you may want to set -i to a
+     low value.
+
+Flat format
+===========
+
+The ts.delta file is a gzipped stream of the following: a 16 byte
+timestamp (struct timeval) followed by 4 byte deltas di (u32).  The
+units of di is microseconds.
+
+       T0,d1,d2,...
+
+The timestamp of the ith packet is T0 + sum{j <= i}dj.
+
+TODO: flat format of the remaining parts.
+--
+Vimal
+
+Jan 27 2013
+
+
+Tools
+
+- http://wand.net.nz/trac/libtrace/wiki.  Tools to convert and replay
+  pcap onto an interface.

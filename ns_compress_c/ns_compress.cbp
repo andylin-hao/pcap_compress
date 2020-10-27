@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ns_compress"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/yoda/CLionProjects/ns_compress"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/yoda/CLionProjects/ns_compress"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/yoda/CLionProjects/ns_compress"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ns_compress">
+				<Option output="/home/yoda/CLionProjects/ns_compress/ns_compress" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/yoda/CLionProjects/ns_compress"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 ns_compress"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ns_compress/fast">
+				<Option output="/home/yoda/CLionProjects/ns_compress/ns_compress" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/yoda/CLionProjects/ns_compress"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 ns_compress/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/yoda/CLionProjects/ns_compress/compress.cc">
+			<Option target="ns_compress"/>
+		</Unit>
+		<Unit filename="/home/yoda/CLionProjects/ns_compress/compress.hh">
+			<Option target="ns_compress"/>
+		</Unit>
+		<Unit filename="/home/yoda/CLionProjects/ns_compress/decompress.cc">
+			<Option target="ns_compress"/>
+		</Unit>
+		<Unit filename="/home/yoda/CLionProjects/ns_compress/flow.cc">
+			<Option target="ns_compress"/>
+		</Unit>
+		<Unit filename="/home/yoda/CLionProjects/ns_compress/flow.hh">
+			<Option target="ns_compress"/>
+		</Unit>
+		<Unit filename="/home/yoda/CLionProjects/ns_compress/helper.cc">
+			<Option target="ns_compress"/>
+		</Unit>
+		<Unit filename="/home/yoda/CLionProjects/ns_compress/helper.hh">
+			<Option target="ns_compress"/>
+		</Unit>
+		<Unit filename="/home/yoda/CLionProjects/ns_compress/main.cpp">
+			<Option target="ns_compress"/>
+		</Unit>
+		<Unit filename="/home/yoda/CLionProjects/ns_compress/packet.cc">
+			<Option target="ns_compress"/>
+		</Unit>
+		<Unit filename="/home/yoda/CLionProjects/ns_compress/packet.hh">
+			<Option target="ns_compress"/>
+		</Unit>
+		<Unit filename="/home/yoda/CLionProjects/ns_compress/util.cc">
+			<Option target="ns_compress"/>
+		</Unit>
+		<Unit filename="/home/yoda/CLionProjects/ns_compress/util.hh">
+			<Option target="ns_compress"/>
+		</Unit>
+		<Unit filename="/home/yoda/CLionProjects/ns_compress/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

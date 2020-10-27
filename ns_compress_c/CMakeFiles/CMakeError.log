@@ -1,0 +1,42 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/yoda/CLionProjects/ns_compress/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_2f9ef/fast && /usr/bin/make  -f CMakeFiles/cmTC_2f9ef.dir/build.make CMakeFiles/cmTC_2f9ef.dir/build
+make[1]: Entering directory '/home/yoda/CLionProjects/ns_compress/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2f9ef.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_2f9ef.dir/src.c.o   -c /home/yoda/CLionProjects/ns_compress/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_2f9ef
+/home/yoda/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/202.7660.37/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2f9ef.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_2f9ef.dir/src.c.o  -o cmTC_2f9ef 
+/usr/bin/ld: CMakeFiles/cmTC_2f9ef.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x5e): undefined reference to `pthread_cancel'
+/usr/bin/ld: src.c:(.text+0x6f): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_2f9ef.dir/build.make:107: cmTC_2f9ef] Error 1
+make[1]: Leaving directory '/home/yoda/CLionProjects/ns_compress/CMakeFiles/CMakeTmp'
+make: *** [Makefile:141: cmTC_2f9ef/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+

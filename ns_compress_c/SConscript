@@ -1,0 +1,8 @@
+Import('env')
+
+src_files = ['compress.cc', 'decompress.cc', 'util.cc']
+lib_deps = ['netsightlib', 'pcap', 'z']
+lib_paths = ['#netsight/src/lib']
+
+env.StaticLibrary(target='compress', source=src_files, 
+                    LIBS=lib_deps, LIBPATH=lib_paths)

@@ -1,0 +1,3 @@
+/home/yoda/CLionProjects/ns_compress/CMakeFiles/rebuild_cache.dir
+/home/yoda/CLionProjects/ns_compress/CMakeFiles/edit_cache.dir
+/home/yoda/CLionProjects/ns_compress/CMakeFiles/ns_compress.dir
