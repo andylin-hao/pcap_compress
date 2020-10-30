@@ -49,6 +49,7 @@ def cpz_ns(file_name):
     out_file_name = os.path.join(os.getcwd(), out_file_name)
     val = os.popen("./ns_compress {}".format(out_file_name))
     print(val.read())
+    os.remove(out_file_name)
 
 
 if __name__ == "__main__":

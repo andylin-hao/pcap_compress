@@ -3,3 +3,4 @@
 /venv
 /ns_compress_c/.idea
 data/
+proc/__pycache__
