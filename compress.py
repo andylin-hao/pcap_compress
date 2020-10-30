@@ -33,12 +33,18 @@ def cpz_ns(file_name):
     pcap = Pcap()
     packets = pcap.parse(file_name)
     data = ''
-    for idx, packet in enumerate(packets):
-        str = packet.raw_data.hex()
-        data += str + "\n"
+    # for idx, packet in enumerate(packets):
+    #     str = packet.raw_data.hex()
+    #     data += str + "\n"
+    # out_file_name = "{}.ns".format(file_name)
+    # with open(out_file_name, "w+") as output:
+    #     output.write(data)
     out_file_name = "{}.ns".format(file_name)
     with open(out_file_name, "w+") as output:
-        output.write(data)
+        for idx, packet in enumerate(packets):
+            info = packet.raw_data.hex()+'\n'
+            output.write(info)
+
 
     out_file_name = os.path.join(os.getcwd(), out_file_name)
     val = os.popen("./ns_compress {}".format(out_file_name))
