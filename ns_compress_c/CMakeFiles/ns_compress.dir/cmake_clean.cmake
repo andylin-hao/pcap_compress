@@ -1,5 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ns_compress.dir/compress.cc.o"
+  "CMakeFiles/ns_compress.dir/cpz_gzip.cpp.o"
+  "CMakeFiles/ns_compress.dir/cpz_ns.cpp.o"
+  "CMakeFiles/ns_compress.dir/cpz_zstd.cpp.o"
   "CMakeFiles/ns_compress.dir/decompress.cc.o"
   "CMakeFiles/ns_compress.dir/flow.cc.o"
   "CMakeFiles/ns_compress.dir/helper.cc.o"

@@ -4,13 +4,16 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/yoda/CLionProjects/ns_compress/compress.cc" "/home/yoda/CLionProjects/ns_compress/CMakeFiles/ns_compress.dir/compress.cc.o"
-  "/home/yoda/CLionProjects/ns_compress/decompress.cc" "/home/yoda/CLionProjects/ns_compress/CMakeFiles/ns_compress.dir/decompress.cc.o"
-  "/home/yoda/CLionProjects/ns_compress/flow.cc" "/home/yoda/CLionProjects/ns_compress/CMakeFiles/ns_compress.dir/flow.cc.o"
-  "/home/yoda/CLionProjects/ns_compress/helper.cc" "/home/yoda/CLionProjects/ns_compress/CMakeFiles/ns_compress.dir/helper.cc.o"
-  "/home/yoda/CLionProjects/ns_compress/main.cpp" "/home/yoda/CLionProjects/ns_compress/CMakeFiles/ns_compress.dir/main.cpp.o"
-  "/home/yoda/CLionProjects/ns_compress/packet.cc" "/home/yoda/CLionProjects/ns_compress/CMakeFiles/ns_compress.dir/packet.cc.o"
-  "/home/yoda/CLionProjects/ns_compress/util.cc" "/home/yoda/CLionProjects/ns_compress/CMakeFiles/ns_compress.dir/util.cc.o"
+  "/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/compress.cc" "/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/CMakeFiles/ns_compress.dir/compress.cc.o"
+  "/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/cpz_gzip.cpp" "/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/CMakeFiles/ns_compress.dir/cpz_gzip.cpp.o"
+  "/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/cpz_ns.cpp" "/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/CMakeFiles/ns_compress.dir/cpz_ns.cpp.o"
+  "/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/cpz_zstd.cpp" "/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/CMakeFiles/ns_compress.dir/cpz_zstd.cpp.o"
+  "/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/decompress.cc" "/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/CMakeFiles/ns_compress.dir/decompress.cc.o"
+  "/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/flow.cc" "/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/CMakeFiles/ns_compress.dir/flow.cc.o"
+  "/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/helper.cc" "/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/CMakeFiles/ns_compress.dir/helper.cc.o"
+  "/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/main.cpp" "/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/CMakeFiles/ns_compress.dir/main.cpp.o"
+  "/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/packet.cc" "/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/CMakeFiles/ns_compress.dir/packet.cc.o"
+  "/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/util.cc" "/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/CMakeFiles/ns_compress.dir/util.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

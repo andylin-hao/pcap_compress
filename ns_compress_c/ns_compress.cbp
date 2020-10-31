@@ -8,101 +8,135 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/yoda/CLionProjects/ns_compress"/>
+				<Option working_dir="/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/yoda/CLionProjects/ns_compress"/>
+				<Option working_dir="/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/yoda/CLionProjects/ns_compress"/>
+				<Option working_dir="/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ns_compress">
-				<Option output="/home/yoda/CLionProjects/ns_compress/ns_compress" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/yoda/CLionProjects/ns_compress"/>
+				<Option output="/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/ns_compress" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
-				<Compiler/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 ns_compress"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/Makefile&quot;  VERBOSE=1 ns_compress"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ns_compress/fast">
-				<Option output="/home/yoda/CLionProjects/ns_compress/ns_compress" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/yoda/CLionProjects/ns_compress"/>
+				<Option output="/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/ns_compress" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
-				<Compiler/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 ns_compress/fast"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/yoda/CLionProjects/ns_compress/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/Makefile&quot;  VERBOSE=1 ns_compress/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/yoda/CLionProjects/ns_compress/compress.cc">
+		<Unit filename="/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/compress.cc">
 			<Option target="ns_compress"/>
 		</Unit>
-		<Unit filename="/home/yoda/CLionProjects/ns_compress/compress.hh">
+		<Unit filename="/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/compress.hh">
 			<Option target="ns_compress"/>
 		</Unit>
-		<Unit filename="/home/yoda/CLionProjects/ns_compress/decompress.cc">
+		<Unit filename="/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/cpz_gzip.cpp">
 			<Option target="ns_compress"/>
 		</Unit>
-		<Unit filename="/home/yoda/CLionProjects/ns_compress/flow.cc">
+		<Unit filename="/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/cpz_gzip.h">
 			<Option target="ns_compress"/>
 		</Unit>
-		<Unit filename="/home/yoda/CLionProjects/ns_compress/flow.hh">
+		<Unit filename="/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/cpz_ns.cpp">
 			<Option target="ns_compress"/>
 		</Unit>
-		<Unit filename="/home/yoda/CLionProjects/ns_compress/helper.cc">
+		<Unit filename="/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/cpz_ns.h">
 			<Option target="ns_compress"/>
 		</Unit>
-		<Unit filename="/home/yoda/CLionProjects/ns_compress/helper.hh">
+		<Unit filename="/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/cpz_zstd.cpp">
 			<Option target="ns_compress"/>
 		</Unit>
-		<Unit filename="/home/yoda/CLionProjects/ns_compress/main.cpp">
+		<Unit filename="/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/cpz_zstd.h">
 			<Option target="ns_compress"/>
 		</Unit>
-		<Unit filename="/home/yoda/CLionProjects/ns_compress/packet.cc">
+		<Unit filename="/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/decompress.cc">
 			<Option target="ns_compress"/>
 		</Unit>
-		<Unit filename="/home/yoda/CLionProjects/ns_compress/packet.hh">
+		<Unit filename="/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/flow.cc">
 			<Option target="ns_compress"/>
 		</Unit>
-		<Unit filename="/home/yoda/CLionProjects/ns_compress/util.cc">
+		<Unit filename="/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/flow.hh">
 			<Option target="ns_compress"/>
 		</Unit>
-		<Unit filename="/home/yoda/CLionProjects/ns_compress/util.hh">
+		<Unit filename="/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/helper.cc">
 			<Option target="ns_compress"/>
 		</Unit>
-		<Unit filename="/home/yoda/CLionProjects/ns_compress/CMakeLists.txt">
+		<Unit filename="/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/helper.hh">
+			<Option target="ns_compress"/>
+		</Unit>
+		<Unit filename="/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/main.cpp">
+			<Option target="ns_compress"/>
+		</Unit>
+		<Unit filename="/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/packet.cc">
+			<Option target="ns_compress"/>
+		</Unit>
+		<Unit filename="/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/packet.hh">
+			<Option target="ns_compress"/>
+		</Unit>
+		<Unit filename="/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/util.cc">
+			<Option target="ns_compress"/>
+		</Unit>
+		<Unit filename="/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/util.hh">
+			<Option target="ns_compress"/>
+		</Unit>
+		<Unit filename="/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

@@ -68,10 +68,10 @@ RM = /home/yoda/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/202.7660.37/bin/c
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yoda/CLionProjects/ns_compress
+CMAKE_SOURCE_DIR = /home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yoda/CLionProjects/ns_compress
+CMAKE_BINARY_DIR = /home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yoda/CLionProjects/ns_compress/CMakeFiles /home/yoda/CLionProjects/ns_compress/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/CMakeFiles /home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yoda/CLionProjects/ns_compress/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -169,6 +169,87 @@ compress.s: compress.cc.s
 compress.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ns_compress.dir/build.make CMakeFiles/ns_compress.dir/compress.cc.s
 .PHONY : compress.cc.s
+
+cpz_gzip.o: cpz_gzip.cpp.o
+
+.PHONY : cpz_gzip.o
+
+# target to build an object file
+cpz_gzip.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ns_compress.dir/build.make CMakeFiles/ns_compress.dir/cpz_gzip.cpp.o
+.PHONY : cpz_gzip.cpp.o
+
+cpz_gzip.i: cpz_gzip.cpp.i
+
+.PHONY : cpz_gzip.i
+
+# target to preprocess a source file
+cpz_gzip.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ns_compress.dir/build.make CMakeFiles/ns_compress.dir/cpz_gzip.cpp.i
+.PHONY : cpz_gzip.cpp.i
+
+cpz_gzip.s: cpz_gzip.cpp.s
+
+.PHONY : cpz_gzip.s
+
+# target to generate assembly for a file
+cpz_gzip.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ns_compress.dir/build.make CMakeFiles/ns_compress.dir/cpz_gzip.cpp.s
+.PHONY : cpz_gzip.cpp.s
+
+cpz_ns.o: cpz_ns.cpp.o
+
+.PHONY : cpz_ns.o
+
+# target to build an object file
+cpz_ns.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ns_compress.dir/build.make CMakeFiles/ns_compress.dir/cpz_ns.cpp.o
+.PHONY : cpz_ns.cpp.o
+
+cpz_ns.i: cpz_ns.cpp.i
+
+.PHONY : cpz_ns.i
+
+# target to preprocess a source file
+cpz_ns.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ns_compress.dir/build.make CMakeFiles/ns_compress.dir/cpz_ns.cpp.i
+.PHONY : cpz_ns.cpp.i
+
+cpz_ns.s: cpz_ns.cpp.s
+
+.PHONY : cpz_ns.s
+
+# target to generate assembly for a file
+cpz_ns.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ns_compress.dir/build.make CMakeFiles/ns_compress.dir/cpz_ns.cpp.s
+.PHONY : cpz_ns.cpp.s
+
+cpz_zstd.o: cpz_zstd.cpp.o
+
+.PHONY : cpz_zstd.o
+
+# target to build an object file
+cpz_zstd.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ns_compress.dir/build.make CMakeFiles/ns_compress.dir/cpz_zstd.cpp.o
+.PHONY : cpz_zstd.cpp.o
+
+cpz_zstd.i: cpz_zstd.cpp.i
+
+.PHONY : cpz_zstd.i
+
+# target to preprocess a source file
+cpz_zstd.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ns_compress.dir/build.make CMakeFiles/ns_compress.dir/cpz_zstd.cpp.i
+.PHONY : cpz_zstd.cpp.i
+
+cpz_zstd.s: cpz_zstd.cpp.s
+
+.PHONY : cpz_zstd.s
+
+# target to generate assembly for a file
+cpz_zstd.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ns_compress.dir/build.make CMakeFiles/ns_compress.dir/cpz_zstd.cpp.s
+.PHONY : cpz_zstd.cpp.s
 
 decompress.o: decompress.cc.o
 
@@ -344,6 +425,15 @@ help:
 	@echo "... compress.o"
 	@echo "... compress.i"
 	@echo "... compress.s"
+	@echo "... cpz_gzip.o"
+	@echo "... cpz_gzip.i"
+	@echo "... cpz_gzip.s"
+	@echo "... cpz_ns.o"
+	@echo "... cpz_ns.i"
+	@echo "... cpz_ns.s"
+	@echo "... cpz_zstd.o"
+	@echo "... cpz_zstd.i"
+	@echo "... cpz_zstd.s"
 	@echo "... decompress.o"
 	@echo "... decompress.i"
 	@echo "... decompress.s"

@@ -1,4 +1,4 @@
-# Install script for directory: /home/yoda/CLionProjects/ns_compress
+# Install script for directory: /home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/yoda/CLionProjects/ns_compress/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

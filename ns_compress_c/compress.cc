@@ -97,18 +97,24 @@ Compressor::seek_end()
 }
 
 void 
-Compressor::flush() 
+Compressor::flush(bool zstd)
 {
-    flush_compress();
+    flush_compress(zstd);
     seek_end();
 }
 
 void 
-Compressor::flush_compress() 
+Compressor::flush_compress(bool zstd)
 {
-    gzflush(fp_ts_comp, Z_FINISH);
-    gzflush(fp_firstpkt_comp, Z_FINISH);
-    gzflush(fp_diff_comp, Z_FINISH);
+    if (zstd) {
+        cpz_zstd_file(fp_ts);
+        cpz_zstd_file(fp_firstpkt);
+        cpz_zstd_file(fp_diff);
+    } else {
+        gzflush(fp_ts_comp, Z_FINISH);
+        gzflush(fp_firstpkt_comp, Z_FINISH);
+        gzflush(fp_diff_comp, Z_FINISH);
+    }
 }
 
 void 

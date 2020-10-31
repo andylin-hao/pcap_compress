@@ -18,6 +18,7 @@
 #include "flow.hh"
 #include "helper.hh"
 #include "picojson.h"
+#include "cpz_zstd.h"
 
 using namespace std;
 
@@ -72,8 +73,8 @@ struct Compressor {
     Compressor();
     ~Compressor();
     void seek_end();
-    void flush_compress();
-    void flush();
+    void flush_compress(bool zstd=false);
+    void flush(bool zstd=false);
     void close();
     double bpp_normal();
     double bpp_compress();

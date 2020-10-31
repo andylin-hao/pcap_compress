@@ -48,8 +48,9 @@ class PcapHead(object):
 
 class Pcap(object):
     """.pcap解析类"""
-    __head = None
-    __ret = 0
+    def __init__(self):
+        self.__head = None
+        self.__ret = 0
 
     def parse(self, file, buffSize=2048):
         """

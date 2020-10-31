@@ -3,6 +3,7 @@
 
 CMakeFiles/ns_compress.dir/compress.cc.o: compress.cc
 CMakeFiles/ns_compress.dir/compress.cc.o: compress.hh
+CMakeFiles/ns_compress.dir/compress.cc.o: cpz_zstd.h
 CMakeFiles/ns_compress.dir/compress.cc.o: flow.hh
 CMakeFiles/ns_compress.dir/compress.cc.o: helper.hh
 CMakeFiles/ns_compress.dir/compress.cc.o: packet.hh
@@ -10,7 +11,29 @@ CMakeFiles/ns_compress.dir/compress.cc.o: picojson.h
 CMakeFiles/ns_compress.dir/compress.cc.o: types.hh
 CMakeFiles/ns_compress.dir/compress.cc.o: util.hh
 
+CMakeFiles/ns_compress.dir/cpz_gzip.cpp.o: cpz_gzip.cpp
+CMakeFiles/ns_compress.dir/cpz_gzip.cpp.o: cpz_gzip.h
+CMakeFiles/ns_compress.dir/cpz_gzip.cpp.o: picojson.h
+CMakeFiles/ns_compress.dir/cpz_gzip.cpp.o: types.hh
+
+CMakeFiles/ns_compress.dir/cpz_ns.cpp.o: compress.hh
+CMakeFiles/ns_compress.dir/cpz_ns.cpp.o: cpz_gzip.h
+CMakeFiles/ns_compress.dir/cpz_ns.cpp.o: cpz_ns.cpp
+CMakeFiles/ns_compress.dir/cpz_ns.cpp.o: cpz_ns.h
+CMakeFiles/ns_compress.dir/cpz_ns.cpp.o: cpz_zstd.h
+CMakeFiles/ns_compress.dir/cpz_ns.cpp.o: flow.hh
+CMakeFiles/ns_compress.dir/cpz_ns.cpp.o: helper.hh
+CMakeFiles/ns_compress.dir/cpz_ns.cpp.o: packet.hh
+CMakeFiles/ns_compress.dir/cpz_ns.cpp.o: picojson.h
+CMakeFiles/ns_compress.dir/cpz_ns.cpp.o: types.hh
+
+CMakeFiles/ns_compress.dir/cpz_zstd.cpp.o: cpz_zstd.cpp
+CMakeFiles/ns_compress.dir/cpz_zstd.cpp.o: cpz_zstd.h
+CMakeFiles/ns_compress.dir/cpz_zstd.cpp.o: picojson.h
+CMakeFiles/ns_compress.dir/cpz_zstd.cpp.o: types.hh
+
 CMakeFiles/ns_compress.dir/decompress.cc.o: compress.hh
+CMakeFiles/ns_compress.dir/decompress.cc.o: cpz_zstd.h
 CMakeFiles/ns_compress.dir/decompress.cc.o: decompress.cc
 CMakeFiles/ns_compress.dir/decompress.cc.o: flow.hh
 CMakeFiles/ns_compress.dir/decompress.cc.o: helper.hh
@@ -32,6 +55,9 @@ CMakeFiles/ns_compress.dir/helper.cc.o: picojson.h
 CMakeFiles/ns_compress.dir/helper.cc.o: types.hh
 
 CMakeFiles/ns_compress.dir/main.cpp.o: compress.hh
+CMakeFiles/ns_compress.dir/main.cpp.o: cpz_gzip.h
+CMakeFiles/ns_compress.dir/main.cpp.o: cpz_ns.h
+CMakeFiles/ns_compress.dir/main.cpp.o: cpz_zstd.h
 CMakeFiles/ns_compress.dir/main.cpp.o: flow.hh
 CMakeFiles/ns_compress.dir/main.cpp.o: helper.hh
 CMakeFiles/ns_compress.dir/main.cpp.o: main.cpp
