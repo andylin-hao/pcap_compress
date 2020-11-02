@@ -51,16 +51,17 @@ done:
  * http://videolectures.net/wsdm09_dean_cblirs/
  */
 
-Compressor::Compressor() 
+Compressor::Compressor(bool zstd)
 {
     fp_ts = dieopenw();
-    fp_ts_comp = compressed_write_stream(fp_ts);
-
     fp_firstpkt = dieopenw();
-    fp_firstpkt_comp = compressed_write_stream(fp_firstpkt);
-
     fp_diff = dieopenw();
-    fp_diff_comp = compressed_write_stream(fp_diff);
+
+    if (!zstd) {
+        fp_ts_comp = compressed_write_stream(fp_ts);
+        fp_firstpkt_comp = compressed_write_stream(fp_firstpkt);
+        fp_diff_comp = compressed_write_stream(fp_diff);
+    }
 
     ts_prev.tv_sec = ~0;
     first_packet_id = 0;
@@ -70,6 +71,7 @@ Compressor::Compressor()
     ts_delta_size = 0, ts_delta_csize = 0;
     desc_size = 0;
     num_packets = 0;
+    use_zstd = zstd;
 
     bzero(NumFieldChanged, sizeof NumFieldChanged);
     bzero(NumChangePerPacket, sizeof NumChangePerPacket);
@@ -106,14 +108,14 @@ Compressor::flush(bool zstd)
 void 
 Compressor::flush_compress(bool zstd)
 {
-    if (zstd) {
-        cpz_zstd_file(fp_ts);
-        cpz_zstd_file(fp_firstpkt);
-        cpz_zstd_file(fp_diff);
-    } else {
+    if (!this->use_zstd) {
         gzflush(fp_ts_comp, Z_FINISH);
         gzflush(fp_firstpkt_comp, Z_FINISH);
         gzflush(fp_diff_comp, Z_FINISH);
+    } else {
+        cpz_zstd_flush(fp_ts);
+        cpz_zstd_flush(fp_firstpkt);
+        cpz_zstd_flush(fp_diff);
     }
 }
 
@@ -236,15 +238,24 @@ template<class T>
 int 
 Compressor::EmitTimestamp(T *obj) 
 {
-    gzwrite(fp_ts_comp, (void *)obj, sizeof(T));
+    if (!this->use_zstd) {
+        gzwrite(fp_ts_comp, (void *)obj, sizeof(T));
+    } else {
+        cpz_zstd_file(fp_ts, (void *)obj, sizeof(T));
+    }
     return sizeof(T);
 }
 
 int 
 Compressor::EmitFirstpacket(const u8 *payload, u8 caplen) 
 {
-    gzwrite(fp_firstpkt_comp, (void *)&caplen, sizeof(caplen));
-    gzwrite(fp_firstpkt_comp, (void *)payload, caplen);
+    if (!this->use_zstd) {
+        gzwrite(fp_firstpkt_comp, (void *)&caplen, sizeof(caplen));
+        gzwrite(fp_firstpkt_comp, (void *)payload, caplen);
+    } else {
+        cpz_zstd_file(fp_firstpkt, (void *)&caplen, sizeof(caplen));
+        cpz_zstd_file(fp_firstpkt, (void *)payload, caplen);
+    }
     return caplen + sizeof(caplen);
 }
 
@@ -252,7 +263,11 @@ int
 Compressor::EmitDiffRecord(u8 *buff, int diffsize) 
 {
     int sz = sizeof(struct DiffRecord) + diffsize;
-    gzwrite(fp_diff_comp, (void *)buff, sz);
+    if (!this->use_zstd) {
+        gzwrite(fp_diff_comp, (void *)buff, sz);
+    } else {
+        cpz_zstd_file(fp_diff, (void *)buff, sz);
+    }
     return sz;
 }
 

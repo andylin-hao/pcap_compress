@@ -30,6 +30,7 @@ CMakeFiles/ns_compress.dir/cpz_ns.cpp.o
 CMakeFiles/ns_compress.dir/cpz_zstd.cpp.o
  /home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/cpz_zstd.cpp
  /home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/cpz_zstd.h
+ /home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/helper.hh
  /home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/picojson.h
  /home/yoda/Dropbox/作业/网络测量与分析技术/pcap_analysis/ns_compress_c/types.hh
 CMakeFiles/ns_compress.dir/decompress.cc.o

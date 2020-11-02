@@ -50,7 +50,7 @@ int cpz_ns_gzip(const vector<string> &packets) {
 }
 
 int cpz_ns_zstd(const vector<string> &packets) {
-    Compressor c;
+    Compressor c(true);
     int packet_number = 0;
     size_t uncomp_size = 0;
     struct timeval start{}, end{};
@@ -67,12 +67,7 @@ int cpz_ns_zstd(const vector<string> &packets) {
         size_t buflen;
         byteify_packet(i.c_str(), buf, &buflen);
         Packet p(buf, buflen, 0, packet_number++, buflen);
-
-        gettimeofday(&start, &tz);
-        start_time = start.tv_sec * 1000000 + start.tv_usec;
         c.write_pkt(p);
-        gettimeofday(&end, &tz);
-        time += (end.tv_sec * 1000000 + end.tv_usec - start_time);
 
         uncomp_size += buflen;
         k++;

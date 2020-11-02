@@ -52,6 +52,8 @@ struct Compressor {
     gzFile fp_firstpkt_comp;
     gzFile fp_diff_comp;
 
+    bool use_zstd;
+
     struct timeval ts_prev;
     u32 first_packet_id;
 
@@ -70,7 +72,7 @@ struct Compressor {
     FlowHashTable flows;
     FlowStats flow_stats;
 
-    Compressor();
+    Compressor(bool zstd = false);
     ~Compressor();
     void seek_end();
     void flush_compress(bool zstd=false);

@@ -29,6 +29,7 @@ CMakeFiles/ns_compress.dir/cpz_ns.cpp.o: types.hh
 
 CMakeFiles/ns_compress.dir/cpz_zstd.cpp.o: cpz_zstd.cpp
 CMakeFiles/ns_compress.dir/cpz_zstd.cpp.o: cpz_zstd.h
+CMakeFiles/ns_compress.dir/cpz_zstd.cpp.o: helper.hh
 CMakeFiles/ns_compress.dir/cpz_zstd.cpp.o: picojson.h
 CMakeFiles/ns_compress.dir/cpz_zstd.cpp.o: types.hh
 

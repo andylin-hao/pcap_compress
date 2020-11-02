@@ -20,10 +20,12 @@
 #include <sys/time.h>
 #include <unistd.h>
 #include "types.hh"
+#include "helper.hh"
 
 using namespace std;
 
 int cpz_zstd(const char* file_name);
-int cpz_zstd_file(FILE* file);
+int cpz_zstd_flush(FILE* file);
+void cpz_zstd_file(FILE* file, void* buf, int len);
 
 #endif //NS_COMPRESS_CPZ_ZSTD_H
